@@ -108,9 +108,6 @@ class Payment
 
         $this->clientId(config('payzap.API.client_id'));
         $this->clientSecret(config('payzap.API.client_secret'));
-
-        // $this->clientId("Ac0tBuG6afr0qtscI84_wMw6D8VDqCdjCnLTVsQmKMtd35HJnLbMrGmgOux6a-KinbhSqyVQAsKf6F1P");
-        // $this->clientSecret("EBMRRlZUNTjwY7PJ_we7wbAjFnifU5s8RV4KIUHJHFp9YKT2I8l-khIZA81czu9GGuH7-cBKgsVR4E1f");
     }
 
     /**
