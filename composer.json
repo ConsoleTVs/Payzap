@@ -1,0 +1,22 @@
+{
+    "name": "consoletvs/payzap",
+    "description": "Simple paypal payments for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erik Campobadal",
+            "email": "soc@erik.cat"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.4",
+        "paypal/rest-api-sdk-php": "^1.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConsoleTVs\\Payzap\\": "./src"
+        }
+    }
+}
