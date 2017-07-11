@@ -75,6 +75,7 @@ class PaymentController extends Controller
         return ['result' => Payment::execute($request->payment_id, $request->payer_id)];
     }
 }
+```
 
 -   payment.blade.php:
 
