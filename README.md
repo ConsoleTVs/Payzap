@@ -1,9 +1,31 @@
-# Payzap
+<p align="center">
+    <img src="http://i.imgur.com/dmdhxRl.png">
+    <h1 align="center">Payzap - Simple paypal payments for laravel</h1>
+</p>
 
-## What is payzap?
+## Description
 
 Payzap is the new simple way of integrating paypal in your laravel application with
 a few lines of code. It uses simple and elegant syntax to create the payment.
+
+
+## Installation
+
+```
+composer require consoletvs/payzap
+```
+
+Register the service provider to the current project (Not needed if using laravel 5.5+):
+
+```
+ConsoleTVs\Payzap\PayzapServiceProvider::class
+```
+
+Publish the configuration:
+
+```
+php artisan vendor:publish
+```
 
 ## Example payment controller & view
 
@@ -23,7 +45,7 @@ class PaymentController extends Controller
      * Returns the payment view and setups the javascript logic.
      *
      * @author Erik Campobadal <soc@erik.cat>
-     *
+     * @copyright 2017 erik.cat
      * @return \Illuminate\Http\Response
      */
     public function index()
@@ -41,7 +63,7 @@ class PaymentController extends Controller
      * Creates the paypal payment using payzap.
      *
      * @author Erik Campobadal <soc@erik.cat>
-     *
+     * @copyright 2017 erik.cat
      * @return \ConsoleTVs\Payzap\Classes\Payment
      */
     public function create()
@@ -65,9 +87,8 @@ class PaymentController extends Controller
      * Executes the paypal payment and returns the result boolean in an array.
      *
      * @author Erik Campobadal <soc@erik.cat>
-     *
+     * @copyright 2017 erik.cat
      * @param  Request $request
-     *
      * @return array
      */
     public function execute(Request $request)

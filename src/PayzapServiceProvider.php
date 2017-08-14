@@ -13,7 +13,7 @@ class PayzapServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__.'/Views', 'payzap');
+        $this->loadViewsFrom(__DIR__ . '/Views', 'payzap');
 
         $this->publishes([
             __DIR__.'/Config/payzap.php' => config_path('payzap.php'),
@@ -27,6 +27,6 @@ class PayzapServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/Config/payzap.php', 'payzap');
+        $this->mergeConfigFrom(__DIR__ . '/Config/payzap.php', 'payzap');
     }
 }
