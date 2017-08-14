@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="http://i.imgur.com/dmdhxRl.png">
+    <img src="http://i.imgur.com/Qk3UbZG.png">
     <h1 align="center">Payzap - Simple paypal payments for laravel</h1>
 </p>
 
