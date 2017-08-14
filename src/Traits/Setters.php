@@ -10,6 +10,10 @@
 
 namespace ConsoleTVs\Payzap\Traits;
 
+use PayPal\Api\Payer;
+use PayPal\Api\Item;
+use PayPal\Api\Details;
+
 /**
  * Payzap setters trait.
  *

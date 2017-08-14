@@ -14,14 +14,12 @@ use PayPal\Auth\OAuthTokenCredential;
 use PayPal\Rest\ApiContext;
 use PayPal\Api\Amount;
 use PayPal\Api\Details;
-use PayPal\Api\Item;
 use PayPal\Api\ItemList;
 use PayPal\Api\Payer;
 use PayPal\Api\Payment as PaypalPayment;
 use PayPal\Api\RedirectUrls;
 use PayPal\Api\Transaction;
 use PayPal\Api\PaymentExecution;
-use ConsoleTVs\Payzap\Classes\Prepare;
 use ConsoleTVs\Payzap\Traits\Setters;
 
 /**
@@ -102,12 +100,9 @@ class Payment
      */
     public function __construct()
     {
-        $this->payer([
-            'paymentMethod' => 'paypal',
-        ]);
-
-        $this->clientId(config('payzap.API.client_id'));
-        $this->clientSecret(config('payzap.API.client_secret'));
+        $this->payer(['paymentMethod' => 'paypal'])
+            ->clientId(config('payzap.API.client_id'))
+            ->clientSecret(config('payzap.API.client_secret'));
     }
 
     /**
@@ -152,7 +147,7 @@ class Payment
             ->setCancelUrl($this->cancel_url ? $this->cancel_url : url('/'));
 
         $payment = new PaypalPayment();
-        $payment->setIntent("sale")
+        $payment->setIntent("authorize")
             ->setPayer($this->payer)
             ->setRedirectUrls($redirect_urls)
             ->setTransactions([$transaction]);
