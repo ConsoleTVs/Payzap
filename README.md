@@ -17,7 +17,7 @@ composer require consoletvs/payzap
 
 Register the service provider to the current project (Not needed if using laravel 5.5+):
 
-```
+```php
 ConsoleTVs\Payzap\PayzapServiceProvider::class
 ```
 
