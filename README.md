@@ -27,7 +27,7 @@ Publish the configuration:
 php artisan vendor:publish
 ```
 
-## Example payment controller & view
+## Example payment controller, view and routes
 
 -   PaymentController.php
 
@@ -112,7 +112,11 @@ class PaymentController extends Controller
     {!! $payment->scripts() !!}
 </body>
 ```
+- Routes (web.php)
 
-# Work in progress
-
-Please wait a few hours before the librari is fully released and documented.
+```php
+Route::get('/payment', 'PaymentController@index')->name('payment');
+Route::get('/payment/finished', function () {
+    return "Payment Executed.";
+})->name('payment.finished');
+```
