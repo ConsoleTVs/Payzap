@@ -18,5 +18,12 @@
         "psr-4": {
             "ConsoleTVs\\Payzap\\": "./src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ConsoleTVs\\Payzap\\PayzapServiceProvider"
+            ]
+        }
     }
 }
