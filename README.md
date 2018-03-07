@@ -93,7 +93,7 @@ class PaymentController extends Controller
      */
     public function execute(Request $request)
     {
-        return ['result' => Payment::execute($request->payment_id, $request->payer_id)];
+        return ['result' => Payment::execute($request->payment_id, $request->payer_id) !== false];
     }
 }
 ```

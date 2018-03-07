@@ -177,7 +177,7 @@ class Payment
      * @param  int $payer_id
      * @param  string $client_id
      * @param  string $client_secret
-     * @return bool
+     * @return \PayPal\Api\Payment
      */
     public static function execute($payment_id, $payer_id, $client_id = null, $client_secret = null)
     {
@@ -207,7 +207,7 @@ class Payment
             return false;
         }
 
-        return true;
+        return $payment;
     }
 
     /**
